@@ -31,11 +31,22 @@ Our API Endpoints can be used by anyone that knows the URL and API structure. In
 
 ### Part 1: Adding Security Configuration:
 
-1. Add the following dependencies to your *build.gradle*:
-   ```groovy
-     implementation 'org.springframework.boot:spring-boot-starter-security'
-     implementation 'org.springframework.security:spring-security-crypto'
-     implementation 'io.jsonwebtoken:jjwt:0.9.1'
+1. Add the following dependencies to your *pom.xml*:
+   ```xml
+     	<dependency>
+              <groupId>org.springframework.boot</groupId>
+              <artifactId>spring-boot-starter-security</artifactId>
+           </dependency>
+   
+        <dependency>
+            <groupId>org.springframework.security</groupId>
+            <artifactId>spring-security-crypto</artifactId>
+        </dependency>
+   
+        <dependency>
+            <groupId>io.jsonwebtoken</groupId>
+            <artifactId>jjwt</artifactId>
+        </dependency>
    ```
 2. Create a new class inside the *config* package called *SecurityConfiguration* where you will define the secure and
    open endpoints and the session management policy:
