@@ -42,6 +42,12 @@ Our API Endpoints can be used by anyone that knows the URL and API structure. In
          <groupId>io.jsonwebtoken</groupId>
          <artifactId>jjwt</artifactId>
       </dependency>
+
+      <dependency>
+         <groupId>org.springframework.security</groupId>
+         <artifactId>spring-security-crypto</artifactId>
+         <version>5.6.2</version>
+      </dependency>
    ```
 2. Create a new class inside the *config* package called *SecurityConfiguration* where you will define the secure and
    open endpoints and the session management policy:
