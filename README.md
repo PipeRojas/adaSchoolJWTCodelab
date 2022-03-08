@@ -36,11 +36,6 @@ Our API Endpoints can be used by anyone that knows the URL and API structure. In
      	<dependency>
               <groupId>org.springframework.boot</groupId>
               <artifactId>spring-boot-starter-security</artifactId>
-           </dependency>
-   
-        <dependency>
-            <groupId>org.springframework.security</groupId>
-            <artifactId>spring-security-crypto</artifactId>
         </dependency>
    
         <dependency>
