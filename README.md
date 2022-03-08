@@ -156,7 +156,7 @@ Our API Endpoints can be used by anyone that knows the URL and API structure. In
 
 5. Crate a new Rest Controller class inside the *controller.auth* package called *AuthController*
 
-```java
+   ```java
 
    import io.jsonwebtoken.Jwts;
    import io.jsonwebtoken.SignatureAlgorithm;
@@ -429,12 +429,12 @@ public class SecurityConfiguration
 }  
    ```
 
-5. Add the following annotation to the DELETE user endpoint below the *@PostMapping* annotation. This will help you
+4. Add the following annotation to the DELETE user endpoint below the *@PostMapping* annotation. This will help you
    restrict which users can perform this critical operation:
       ```properties
       @RolesAllowed("ADMIN")
       ```
-6. Run the project and verify that it works as expected following these steps:
+5. Run the project and verify that it works as expected following these steps:
    * Start the server.
    * Send a POST request to the auth endpoint using the credentials of your test user.
    * Copy the token from the response.
