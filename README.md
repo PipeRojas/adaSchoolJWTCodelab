@@ -39,8 +39,9 @@ Our API Endpoints can be used by anyone that knows the URL and API structure. In
       </dependency>
    
       <dependency>
-         <groupId>io.jsonwebtoken</groupId>
-         <artifactId>jjwt</artifactId>
+            <groupId>io.jsonwebtoken</groupId>
+            <artifactId>jjwt</artifactId>
+            <version>0.9.1</version>
       </dependency>
 
       <dependency>
