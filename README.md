@@ -33,15 +33,15 @@ Our API Endpoints can be used by anyone that knows the URL and API structure. In
 
 1. Add the following dependencies to your *pom.xml*:
    ```xml
-     	<dependency>
-              <groupId>org.springframework.boot</groupId>
-              <artifactId>spring-boot-starter-security</artifactId>
-        </dependency>
+      <dependency>
+           <groupId>org.springframework.boot</groupId>
+           <artifactId>spring-boot-starter-security</artifactId>
+      </dependency>
    
-        <dependency>
-            <groupId>io.jsonwebtoken</groupId>
-            <artifactId>jjwt</artifactId>
-        </dependency>
+      <dependency>
+         <groupId>io.jsonwebtoken</groupId>
+         <artifactId>jjwt</artifactId>
+      </dependency>
    ```
 2. Create a new class inside the *config* package called *SecurityConfiguration* where you will define the secure and
    open endpoints and the session management policy:
