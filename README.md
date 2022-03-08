@@ -89,7 +89,7 @@ Our API Endpoints can be used by anyone that knows the URL and API structure. In
     ```java
         public class LoginDto
          {
-         String email;
+             String email;
          
              String password;
          
@@ -156,7 +156,7 @@ Our API Endpoints can be used by anyone that knows the URL and API structure. In
 
 5. Crate a new Rest Controller class inside the *controller.auth* package called *AuthController*
 
-    ```java
+```java
 
    import io.jsonwebtoken.Jwts;
    import io.jsonwebtoken.SignatureAlgorithm;
@@ -255,7 +255,7 @@ This filter will help you verify the authroization token send on the request aut
    public class TokenAuthentication
    extends AbstractAuthenticationToken
    {
-   String token;
+       String token;
    
        String subject;
    
@@ -333,8 +333,8 @@ This filter will help you verify the authroization token send on the request aut
    public class JwtRequestFilter
    extends OncePerRequestFilter
    {
-   @Value( "${app.secret}" )
-   String secret;
+      @Value( "${app.secret}" )
+      String secret;
    
        public JwtRequestFilter()
        {
@@ -421,11 +421,10 @@ public class SecurityConfiguration
    protected void configure( HttpSecurity http )
            throws Exception
    {
-      http.addFilterBefore( jwtRequestFilter,
-                            BasicAuthenticationFilter.class ).cors().and().csrf().disable().authorizeRequests().antMatchers(
-              HttpMethod.GET, "/v1/health" ).permitAll().antMatchers( HttpMethod.POST,
-                                                                      "/v1/auth" ).permitAll().anyRequest().authenticated().and().sessionManagement().sessionCreationPolicy(
-              SessionCreationPolicy.STATELESS );
+      http.addFilterBefore( jwtRequestFilter,BasicAuthenticationFilter.class ).cors().and().csrf().disable().authorizeRequests().
+              antMatchers(HttpMethod.GET, "/v1/health" ).permitAll().antMatchers( HttpMethod.POST,"/v1/auth").
+              permitAll().anyRequest().authenticated().and().sessionManagement().
+              sessionCreationPolicy(SessionCreationPolicy.STATELESS );
    }
 }  
    ```
