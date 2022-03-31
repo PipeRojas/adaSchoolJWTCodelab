@@ -72,7 +72,8 @@ Our API Endpoints can be used by anyone that knows the URL and API structure. In
           protected void configure( HttpSecurity http )
               throws Exception
           {
-              http.cors().and().csrf().disable()
+              http.addFilterBefore( jwtRequestFilter, BasicAuthenticationFilter.class )
+                  .cors().and().csrf().disable()
                   .authorizeRequests()
                   .antMatchers( HttpMethod.GET, "/v1/health" ).permitAll()
                   .antMatchers( HttpMethod.POST,"/v1/auth" ).permitAll()
